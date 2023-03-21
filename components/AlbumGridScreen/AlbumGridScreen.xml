@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<component name="AlbumGridScreen" extends="Group">
+    <script type="text/brightscript" uri="AlbumGridScreen.brs" />
+
+    <interface>
+        <field id = "selected" type = "int" alias = "AlbumGrid.itemSelected"/>
+        <field id = "content" type = "node" alias = "AlbumGrid.content"/>
+
+    </interface>
+
+
+    <children>
+
+        <PosterGrid 
+            id = "AlbumGrid" 
+            basePosterSize = "[ 200, 200 ]" 
+            numColumns = "5" 
+            numRows = "2" 
+            itemSpacing = "[ 40, 40 ]" 
+            translation = "[70 , 70]"/>
+
+    </children>
+</component>

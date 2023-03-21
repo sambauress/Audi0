@@ -1,0 +1,40 @@
+<component name = "AlbumMarkupScreen" extends = "Group" initialFocus = "MarkupList" >
+
+<interface>
+  <field id="albummarkuplistSelected" type="int" alias="MarkupList.itemSelected" />
+  <field id="content" type="node" alias = "MarkupList.content"/>
+  <field id="album" type="string" alias="itemIcon.uri" />
+</interface>
+  <script type = "text/brightscript" >
+
+    <![CDATA[
+
+
+    
+
+
+    ]]>
+
+  </script>
+
+  <children >
+
+    <Poster 
+      id = "itemIcon" 
+      translation = "[ 30, 30 ]" 
+      width = "200" 
+      height = "200"
+      uri = "http://192.168.0.115/Fourever/Folder.jpg" />
+
+    <MarkupList 
+      id = "MarkupList" 
+      itemComponentName = "AlbumMarkupItem" 
+      itemSize = "[ 900, 70 ]" 
+      itemSpacing = "[ 0, 10 ]" 
+      drawFocusFeedback = "false" 
+      translation = "[270, 30]" 
+      numRows = "6"/>
+
+  </children>
+
+</component>

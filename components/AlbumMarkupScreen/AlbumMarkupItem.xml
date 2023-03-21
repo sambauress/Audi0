@@ -1,0 +1,61 @@
+<?xml version = "1.0" encoding = "utf-8" ?>
+
+<!--********** Copyright 2016 Roku Corp.  All Rights Reserved. **********-->
+ 
+<component name = "AlbumMarkupItem" extends = "Group" >
+ 
+  <interface> 
+    <field id = "itemContent" type = "node" onChange = "showcontent" />
+    <field id = "focusPercent" type = "float" onChange = "showfocus" />
+  </interface>
+ 
+  <script type = "text/brightscript" >
+
+    <![CDATA[
+
+    sub init()
+      m.top.id = "markuplistitem"
+      m.itemlabel = m.top.findNode("itemLabel")
+      m.itemcursor = m.top.findNode("itemcursor")
+
+    end sub
+
+    sub showcontent()
+      itemcontent = m.top.itemContent
+      m.itemlabel.text = itemcontent.title
+
+    end sub
+
+    sub showfocus()
+      m.itemcursor.opacity = m.top.focusPercent 
+    end sub
+
+    ]]>
+
+  </script>
+
+  <children>
+
+    <Rectangle 
+      id = "itemcursor" 
+      translation = "[ 0, 0 ]" 
+      width = "900" 
+      height = "70" 
+      color = "0x808080FF" 
+      opacity = "0.0" />
+
+    <Poster 
+      id = "itemIcon" 
+      translation = "[ 0, 0 ]" 
+      width = "70" 
+      height = "70" 
+      uri = "pkg:/images/song_icon.png"/>
+
+    <Label 
+      id = "itemLabel" 
+      translation = "[ 90, 10 ]" />
+
+
+  </children>
+
+</component>

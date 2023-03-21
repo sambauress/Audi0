@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<component name="MainScene" extends="Scene">
+    <script type="text/brightscript" uri="MainScreen.brs" />
+    <script type="text/brightscript" uri="UILogic/AudioNodeLogic.brs" />
+    <script type="text/brightscript" uri="UILogic/ScreenStackLogic.brs" />
+    <script type="text/brightscript" uri="UILogic/ContentTaskLogic.brs" />
+    <script type="text/brightscript" uri="UILogic/AlbumGridScreenLogic.brs" />
+    <script type="text/brightscript" uri="UILogic/AlbumMarkupScreenLogic.brs" />
+
+    <children>
+
+
+
+        <Audio
+            id = "AudioNode"/>
+         
+         <Group id="progressBar" translation="[0,560]" >
+
+         
+
+            <Label
+                id="timeLapsed"
+                height="44"
+                width="0"
+                font="font:MediumBoldSystemFont"
+                text = "00:00"
+                translation="[90,30]" />
+
+            <Label
+                id="title"
+                height="44"
+                width="0"
+                font="font:MediumBoldSystemFont"
+                text = "testing"
+                translation="[175,30]" />
+
+            <Rectangle
+                color="0x000000FF"
+                width="1180"
+                height="130"
+                translation="[50,0]"
+                opacity = "0.5" />
+
+            <Rectangle
+                id="progressBarBase"
+                color="0xC3C3C3FF"
+                width="1090"
+                height="2"
+                translation="[90,83]" />
+            <Rectangle
+                id="progressBarProgress"
+                color="0xBD00FFFF"
+                width="0"
+                height="2"
+                translation="[90,83]" />
+     
+            <Poster
+                id="progressDot"
+                uri="pkg:/images/progressDot.png"
+                width="14"
+                height="13"
+                visible="true"
+                translation="[90,77]" />
+        
+        </Group>
+        
+        
+
+
+    </children>
+</component>
